@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paste Text To Blogger</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container pb-5">
+        <form action="" class="mt-5">
+            <button type="button" id="reset" class="btn btn-danger float-end">Limpar Campos</button>
+            <div class="row">
+                <div class="col-6">
+                    <fieldset class="">
+                        <legend>Dados</legend>
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="titulo">Título:</label>
+                                <input type="text" required id="titulo" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="editora">Editora:</label>
+                                <select name="editora" id="editora" class="form-select" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="Marvel">Marvel</option>
+                                    <option value="DC Comics">DC Comics</option>
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <label for="data">Lançamento data:</label>
+                                <input type="text" required id="data" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="descricao">Descição:</label>
+                                <textarea class="form-control" required name="" id="descricao" cols="30"
+                                    rows="7"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="imagem">Link Imagem:</label>
+                                <input type="url" id="imagem" required class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-7">
+                                <button type="submit" class="btn btn-primary mt-4">Gerar Código</button>
+                            </div>
+                            <div class="col-5 pt-2 mt-4" style="margin-left: -50px;">
+                                <span id="copy" class="bg-success text-white d-none rounded-1 p-2">Texto Copiado!!</span>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="col-6">
+                    <fieldset>
+                        <legend>HQs Links</legend>
+                        <div class="row" id="buttons-area">
+                            <div class="col-12">
+                                <button type="button" id="btnAdd" class="btn btn-primary btn-sm rounded-1">Adicionar
+                                    Campos + </button>
+
+                            </div>
+                            <div class="col-12 campos">
+                                <label for="">1</label>
+                                <input type="url" required id="download" class="form-control">
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
